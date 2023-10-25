@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<button type="button" onclick="play()">Play</button>
+<script>
+    function play() {
+        let low=+prompt("Please enter a lowest number");
+        let high=+prompt("Please enter a highest number");
+        let n=Math.floor(Math.random()*(high-low))+low;
+        let num;
+        let count=0;
+        do {
+            count++;
+            if (count==4) {
+                alert("You lose the game");
+                break;
+            }
+            num=+prompt("Please enter your number");
+            if (num==n) {
+                alert("You are right");
+            }
+            else {
+                if (num>n) {
+                    alert("You are wrong. Please enter a lower number");
+                }
+                else {
+                    alert("You are wrong. Please enter a higher number");
+                }
+            }
+        } while (num!=n);
+    }
+</script>
+</body>
+</html>
