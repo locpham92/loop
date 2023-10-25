@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<!--Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên-->
+<h3>Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h3>
+<script>
+    let S=0;
+    let i=0;
+    let num=1;
+    do {
+        if (num%7==0) {
+            S=S+num;
+            i++;
+        }
+        num++;
+    } while (i<30);
+    document.write(S);
+</script>
+</body>
+</html>
